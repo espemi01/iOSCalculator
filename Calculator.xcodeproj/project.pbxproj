@@ -12,6 +12,7 @@
 		F61774101C6A38BE0074F6BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F617740E1C6A38BE0074F6BB /* Main.storyboard */; };
 		F61774121C6A38BE0074F6BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F61774111C6A38BE0074F6BB /* Assets.xcassets */; };
 		F61774151C6A38BE0074F6BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61774131C6A38BE0074F6BB /* LaunchScreen.storyboard */; };
+		F61DEB791C7C4CAF0027485B /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DEB781C7C4CAF0027485B /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F61774111C6A38BE0074F6BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F61774141C6A38BE0074F6BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F61774161C6A38BE0074F6BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F61DEB781C7C4CAF0027485B /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		F61774091C6A38BE0074F6BB /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				F617740A1C6A38BE0074F6BB /* AppDelegate.swift */,
+				F6A3F1931C8787B9004BF6BF /* Supporting Files */,
+				F61DEB781C7C4CAF0027485B /* CalculatorBrain.swift */,
 				F617740C1C6A38BE0074F6BB /* ViewController.swift */,
 				F617740E1C6A38BE0074F6BB /* Main.storyboard */,
-				F61774111C6A38BE0074F6BB /* Assets.xcassets */,
-				F61774131C6A38BE0074F6BB /* LaunchScreen.storyboard */,
-				F61774161C6A38BE0074F6BB /* Info.plist */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		F6A3F1931C8787B9004BF6BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F61774111C6A38BE0074F6BB /* Assets.xcassets */,
+				F61774131C6A38BE0074F6BB /* LaunchScreen.storyboard */,
+				F617740A1C6A38BE0074F6BB /* AppDelegate.swift */,
+				F61774161C6A38BE0074F6BB /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +107,7 @@
 				TargetAttributes = {
 					F61774061C6A38BE0074F6BB = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = A8R25SS6MP;
 					};
 				};
 			};
@@ -135,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F61DEB791C7C4CAF0027485B /* CalculatorBrain.swift in Sources */,
 				F617740D1C6A38BE0074F6BB /* ViewController.swift in Sources */,
 				F617740B1C6A38BE0074F6BB /* AppDelegate.swift in Sources */,
 			);
@@ -249,10 +262,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mae.edu.luther.cs353.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +276,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mae.edu.luther.cs353.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +305,7 @@
 				F617741B1C6A38BE0074F6BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
