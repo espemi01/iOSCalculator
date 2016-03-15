@@ -97,7 +97,7 @@ class CalculatorBrain
                     }
                 }
             case .Variable(let symbol):
-                if let variable = variableValues[symbol] {
+                if let _ = variableValues[symbol] {
                     return (variableValues[symbol], remainingOps)
                 }
                 error = "Variable 'M' Not Set"
@@ -111,13 +111,8 @@ class CalculatorBrain
     }
     
     typealias PropertyList = AnyObject
-    var program: PropertyList { // guaranteed to be a property list
+    var program: PropertyList {
         get {
-            //            var returnValue = Array<String>()
-            //            for op in opStack {
-            //                returnValue.append(op.description)
-            //            }
-            //            return returnValue
             return opStack.map{ $0.description }
         }
         set {
